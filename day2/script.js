@@ -56,3 +56,65 @@ let space = ' '
 console.log(first.concat(space, second))
 // Use repeat() method to print 30 Days Of JavaScript 2 times
 console.log(challenge.concat('\n').repeat(2))
+
+
+//level 2
+console.log("The quote \'There is no exercise better for the heart than reaching down and lifting people up.\' by John Holmes teaches us to help one another.")
+console.log("\"Love is not patronizing and charity isn\'t about pity, it is about love. Charity and love are the same -- with charity you give love, so don\'t just give money but reach out your hand instead.\"")
+
+// Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+console.log(typeof('10') == typeof(10) )
+console.log(typeof(Number('10')) == typeof(10))
+// Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+console.log(typeof(parseFloat('9.8')) == 10)
+console.log(Math.round(parseFloat('9.8')) == 10)
+// Check if 'on' is found in both python and jargon
+str_1 = 'python'
+str_2 = 'jargon'
+console.log(str_1.search('on') == str_2.search('on'))
+// I hope this course is not full of jargon. Check if jargon is in the sentence.
+sentence_1 = "I hope this course is not full of jargon"
+console.log(sentence_1.match('jargon'))
+// Generate a random number between 0 and 100 inclusively.
+console.log(Math.round(Math.random() * 100))
+// Generate a random number between 50 and 100 inclusively.
+console.log(Math.round(Math.random() * 50 + 50))
+// Generate a random number between 0 and 255 inclusively.
+console.log(Math.round(Math.random() * 255))
+// Access the 'JavaScript' string characters using a random number.
+let string_test = 'JavaScript'
+console.log(string_test[Math.floor(Math.random() * string_test.length - 1)])
+// Use console.log() and escape characters to print the following pattern.
+// 1 1 1 1 1
+// 2 1 2 4 8
+// 3 1 3 9 27
+// 4 1 4 16 64
+// 5 1 5 25 125
+
+console.log('1\t1\t1\t1\t1\n2\t1\t2\t4\t8\n')
+
+//Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let first_part = sentence.substr(0,sentence.indexOf('because'))
+
+let second_part = sentence.substr(sentence.lastIndexOf('because') + 'because'.length + 1, sentence.length-1)
+
+console.log(first_part.concat(second_part))
+
+// 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
+let love_count = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+console.log(love_count.match(/love/gi).length)
+// Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+console.log(sentence.match(/because/gi).length)
+
+//Clean the following text and find the most frequent word (hint, use replace and regular expressions).
+const dirty = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+let regEx = /[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-]/g
+const clean = dirty.replace(regEx, '')
+console.log(clean)
+
+//Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let calculate_num = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let regExForNum = /\d+/gi
+
+let numbers = calculate_num.match(regExForNum)
+console.log( (numbers[0] * 12) + (numbers[2] * 12) + Number(numbers[1]) )
