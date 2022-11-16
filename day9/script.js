@@ -203,7 +203,7 @@ console.log(temp)
 console.log(`Length of the array: ${countries1.length}`)
 
 // Create a function which return an array of objects, which is the letter and the number
-//  of times the letter use to start with a name of a country.
+// of times the letter use to start with a name of a country.
 
 
 // Declare a getFirstTenCountries function and return an array of ten countries. 
