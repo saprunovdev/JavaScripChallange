@@ -45,17 +45,35 @@ class Statistics{
 
     //find the mean distribution of the array
     mean(arr){
-
+        let mean = (this.sum(arr)/this.count(arr))
+        return Math.ceil(mean)
     }
 
-    //find the media of array
+    //find the median of array
     median(arr){
+        let median
+        if (this.count(arr) % 2 == 0){
+            return median = (arr[Math.floor(this.count(arr)/2)] - arr[Math.ceil(this.count(arr)/2)])/2
+        }else{
+            return median = this.sort(arr)[Math.floor(this.count(arr)/2)]
 
+        }
     }
 
     //find the mode of array
+    //mode is a number, which shows the most
     mode(arr){
-
+        let count = {}
+        let maxNum
+        arr.forEach(e => {
+            count[e] = ++ count[e] || 1;
+        });
+        console.log(count)
+        maxNum = Object.keys(count).reduce(function(a,b){
+            return count[a] > count[b] ? a : b;
+        }
+        )
+        return maxNum
     }
 
     //find the Variance of the array
@@ -82,9 +100,9 @@ console.log('Sum: ', statistics.sum(ages)) // 744
 console.log('Min: ', statistics.min(ages)) // 24
 console.log('Max: ', statistics.max(ages)) // 38
 console.log('Range: ', statistics.range(ages)) // 14
-// console.log('Mean: ', statistics.mean(ages)) // 30
-// console.log('Median: ',statistics.median(ages)) // 29
-// console.log('Mode: ', statistics.mode(ages)) // {'mode': 26, 'count': 5}
+console.log('Mean: ', statistics.mean(ages)) // 30
+console.log('Median: ',statistics.median(ages)) // 29
+console.log('Mode: ', statistics.mode(ages)) // {'mode': 26, 'count': 5}
 // console.log('Variance: ',statistics.var(ages)) // 17.5
 // console.log('Standard Deviation: ', statistics.std(ages)) // 4.2
 // console.log('Frequency Distribution: ',statistics.freqDist(ages))
