@@ -85,6 +85,6 @@ const student = {
     }
   }
 
-const copyStudent = {...student, frontEnd:[{skill:'SQL', level: 8}]}
+const copyStudent = {...student}
 
 console.log(copyStudent)
