@@ -127,4 +127,4 @@ console.log(studentJSON)
 let text = JSON.parse(txt)
 console.log(text)
 // Find the user who has many skills from the variable stored in txt.
-//Come back to these alogrithms with finding max or min values in objectst
+//Come back to these alogrithms with finding max or min values in objects
