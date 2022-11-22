@@ -1,0 +1,15 @@
+html{
+    background-color: bisque;
+   
+}
+body{
+    text-align: center;
+    color:rgb(56 43 38);
+}
+
+.country{
+    margin: 5px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 70%;
+}
