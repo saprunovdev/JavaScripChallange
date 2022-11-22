@@ -1,0 +1,21 @@
+header{
+    text-align: center;
+}
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+    background-color: rgb(217, 199, 198); 
+    max-width: fit-content;
+    min-width: 180px;
+    min-height: 50px;
+    padding-top: 25px;
+    text-align: center;
+    margin: 10px;
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
