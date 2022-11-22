@@ -19,5 +19,5 @@ const keyDisplay = document.querySelector('#current-key')
 
 addEventListener('keydown', e => {
     keyDisplay.innerHTML = ''
-    keyDisplay.textContent = e.keys
+    keyDisplay.textContent = e.key
 })
