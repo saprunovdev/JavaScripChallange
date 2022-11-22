@@ -4,7 +4,7 @@ const current = document.querySelector('.current')
 const input = document.querySelector('input')
 const result = document.querySelector('.result')
 
-//display all countries
+//display countries, which satisfies the querry
 function displayCountries(q){
     for(i in q){
         let country = document.createElement('div')
@@ -21,6 +21,7 @@ function displayCountries(q){
 
 //search logic
 input.addEventListener('input', e =>{
+    //reset the result div and display countries which satisfies the search result
     result.innerHTML = ''
     let qeurry = countries.filter(i => i.toLowerCase().includes(e.target.value.toLowerCase()))
     current.textContent = `You are searcning for: ${e.target.value} [${qeurry.length}]`
