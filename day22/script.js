@@ -15,3 +15,11 @@ for(i=1; i <= 100; i++){
         text.style.backgroundColor = 'pink'
     }
 }
+
+let country
+for(i in countries){
+    country = document.createElement('p')
+    country.className = 'country'
+    country.textContent = countries[i]
+    body.appendChild(country)
+}

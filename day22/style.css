@@ -3,3 +3,15 @@
     min-width: 30px;
     text-align: center;
 }
+
+.country{
+    display: inline-block;
+    min-width: 165px;
+    min-height: 50px;
+    border: solid black 1px;
+    margin: 5px;
+    text-align: center;
+    padding-top: 25px;
+
+}
+
