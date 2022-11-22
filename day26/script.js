@@ -22,11 +22,9 @@ function displayCountries(q){
 //search logic
 input.addEventListener('input', e =>{
     result.innerHTML = ''
-    let qeurry = countries.filter(i => i.includes(e.target.value))
+    let qeurry = countries.filter(i => i.toLowerCase().includes(e.target.value.toLowerCase()))
     current.textContent = `You are searcning for: ${e.target.value} [${qeurry.length}]`
     displayCountries(q= qeurry)
-
 })
 
 onload(displayCountries(q=countries))
-
