@@ -9,3 +9,5 @@ https://github.com/Asabeneh/30-Days-Of-JavaScript
 - [ ] How to return full object with max key
 - [ ] Finish day 21
 - [ ] Day 22 excercise level 2
+- [ ] Study three js
+- [ ] Study react
